@@ -1,0 +1,19 @@
+.c-title{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 60rem){
+	.c-title{
+    	font-size:36px;
+	}
+}
+h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+p{
+    font-size:16px;
+    margin-bottom: 3px;
+    margin-left:5px;
+}

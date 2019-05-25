@@ -1,0 +1,57 @@
+#msg-table .msg-title,#msg-table .msg-time{
+    color: #999;
+}
+#msg-table .msg-title:hover{
+    color: #333;
+    text-decoration: underline;
+}
+#msg-table .msg-title.unread{
+    color: #333;
+}
+#msg-table thead{
+    background: #f5f6fa;
+    color: #666;
+}
+.msg-tip{
+    padding: 20px 0;
+    color: #333;
+    font-size: 18px;
+    text-align: center
+}
+.msg-pagination{
+    float: right;
+    margin: 0;
+}
+.pagination{
+    margin: 0 5px;
+}
+.msg-pagination .input-group{
+    display: inline-block;
+}
+.msg-pagination #pageInput{
+    width: 50px;
+}
+.msg-pagination .page-total{
+    display: inline-block;
+    color: #999;
+    transform: translateY(-13px);
+}
+.ms-title{
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin: 8px;
+}
+.ms-info{
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+}
+.ms-content{
+    font-size: 16px;
+    padding: 5px 15px;
+    color: #333;
+}
+.ms-hr{
+    margin: 15px;
+}

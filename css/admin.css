@@ -1,0 +1,32 @@
+.avatar-v{
+    width: 250px;
+    height: 250px;
+    border: 1px solid #777;
+}
+.avatar-v.medium{
+    width: 175px;
+    height: 175px;
+}
+.avatar-v.small{
+    width: 100px;
+    height: 100px;
+}
+.avatar-v img{
+	width: 100%;
+    height: 100%;
+}
+.modal-manage .modal-body .row{
+    margin: 5px 2px;
+}
+.w80{ max-width: 80%; }
+.w60{ max-width: 60%; }
+.w40{ max-width: 40%; }
+.w20{ max-width: 20%; }
+.d2.row{
+    line-height: 30px;
+    min-height: 30px;
+    margin-bottom: 8px;
+}
+.selectData{
+    width: 150px !important;
+}

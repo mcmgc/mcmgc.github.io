@@ -1,0 +1,87 @@
+fieldset.inputui{
+    border: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    font-size: 16px;
+}
+fieldset.inputui span.inputui{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    background: #fff !important;
+}
+fieldset.inputui span.inputui input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff !important;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    color: #666666;
+    display: block;
+    float: left;
+    font-size: 1.1em;
+    height: 2.5em;
+    margin: 0;
+    padding: 0.2em 1rem 0;
+    position: relative;
+    width: 100%;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+fieldset.inputui span.inputui input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+fieldset.inputui span.inputui.has-error input{
+    border-color: #ff2222;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+fieldset.inputui span.inputui.has-warning input{
+    border-color: #8a6d3b;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+fieldset.inputui span.inputui.has-success input{
+    border-color: #26C267;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+fieldset.inputui span.inputui .label{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-touch-callout: none;
+    color: #6f6f6f;
+    display: inline;
+    float: right;
+    font-size: 1.03em;
+    left: 1.27rem;
+    line-height: 2.6em;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    text-align: left;
+    transform-origin: 0 0;
+    transition-duration: 0.15s;
+    transition-property: transform, color, line-height, padding, background;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: inherit;
+}
+fieldset.inputui span.inputui.inputui-filled .label{
+    color: #9c9c9c;
+    transform: translate(-0.3rem, -1.115rem) scale(0.777);
+    padding: 0 0.6rem;
+    line-height: 1.5em;
+    background: #fff;
+}

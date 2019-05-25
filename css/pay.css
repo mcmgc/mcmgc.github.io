@@ -1,0 +1,55 @@
+#pay-form{
+    font-size: 18px;
+}
+#pay-form label{
+    font-weight: normal;
+}
+ul.optionBtn{
+    padding-left: 0;
+}
+.optionBtn > li{
+    display: inline-block;
+}
+#pay-errMsg{
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+#pay-errMsg .fa{
+    font-size: 80px;
+    color: #f33;
+}
+#pay-errMsg .txt{
+    color: #333;
+}
+#order-info{
+    font-size: 16px;
+}
+#order-info dt{
+    float: left;
+    font-weight: normal;
+}
+#order-info dd{
+    text-align: right;
+    font-weight: normal;
+}
+.tip-txt{
+    color: #aaa;
+    margin-bottom: 10px;
+    text-align: center;
+    clear: both;
+}
+.qrcode{
+    width: 200px;
+    height: 200px
+}
+.time-item strong {
+    background: #3ec742;
+    color: #fff;
+    line-height: 25px;
+    font-size: 15px;
+    font-family: Arial;
+    padding: 0 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}

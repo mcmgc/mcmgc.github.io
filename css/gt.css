@@ -1,0 +1,93 @@
+.gt-captcha {
+	width: 100%;
+	display: inline-block
+}
+
+.gt-captcha .gt-text {
+	height: 42px;
+	width: 100%;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #f3f3f3;
+	color: #bbb;
+	font-size: 14px;
+	letter-spacing: .1px;
+	line-height: 42px
+}
+
+.gt-captcha .gt-wait {
+	display: none;
+	height: 42px;
+	width: 100%;
+	text-align: center;
+	border-radius: 2px;
+	background-color: #f3f3f3
+}
+
+.gt-loading {
+	margin: auto;
+	width: 70px;
+	height: 20px
+}
+
+.gt-loading-dot {
+	float: left;
+	width: 8px;
+	height: 8px;
+	margin: 18px 4px;
+	background: #ccc;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	opacity: 0;
+	-webkit-box-shadow: 0 0 2px black;
+	-moz-box-shadow: 0 0 2px black;
+	-ms-box-shadow: 0 0 2px black;
+	-o-box-shadow: 0 0 2px black;
+	box-shadow: 0 0 2px black;
+	-webkit-animation: loadingFade 1s infinite;
+	-moz-animation: loadingFade 1s infinite;
+	animation: loadingFade 1s infinite
+}
+
+.gt-loading-dot:nth-child(1) {
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	animation-delay: 0s
+}
+
+.gt-loading-dot:nth-child(2) {
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	animation-delay: .1s
+}
+
+.gt-loading-dot:nth-child(3) {
+	-webkit-animation-delay: .2s;
+	-moz-animation-delay: .2s;
+	animation-delay: .2s
+}
+
+.gt-loading-dot:nth-child(4) {
+	-webkit-animation-delay: .3s;
+	-moz-animation-delay: .3s;
+	animation-delay: .3s
+}
+
+@-webkit-keyframes loadingFade {
+	0% { opacity: 0 }
+	50% { opacity: .8 }
+    100% { opacity: 0 }
+}
+
+@-moz-keyframes loadingFade {
+	0% { opacity: 0 }
+	50% { opacity: .8 }
+    100% { opacity: 0 }
+}
+
+@keyframes loadingFade {
+	0% { opacity: 0 }
+	50% { opacity: .8 }
+    100% { opacity: 0 }
+}

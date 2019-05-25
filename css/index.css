@@ -1,0 +1,179 @@
+.news-box .title, .intro .title{
+    font-family: DroidSans;
+}
+.rtx{
+    font-family: hdjxyt;
+}
+.ministorm:hover{
+    animation: ministorm .5s ease;
+}
+@keyframes ministorm{
+    0%, 100%{
+        transform:rotate(0deg);
+    }
+    30%{
+        transform:rotate(8deg);
+    }
+    70%{
+        transform:rotate(-8deg);
+    }
+}
+
+.index-top{
+	margin-top:15px;
+}
+.index-top div{
+	display:inline-block;
+}
+.index-top .logo{
+    width: 140px;
+    height: 140px;
+}
+.index-top .logo img{
+    width: 100%;
+}
+.index-top .rtx{
+    display: block;
+    text-align: right;
+    position: relative;
+    transform: translate(0,-100%);
+    right:0;
+    bottom: 0;
+    font-size: 35px;
+}
+@media(max-width: 500px){
+    .index-top .rtx {
+    	font-size: 25px;
+    }
+}
+.index-top .rtx a{
+    color: #000;
+}
+.index-top .rtx a:hover{
+    color: #666;
+}
+.news-box{
+    border: 1px #ccc solid;
+    border-radius: 2px;
+    padding:10px;
+}
+.news-box .title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.news-box .item a{
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+}
+.news-box .item a:hover{
+    text-decoration: underline;
+}
+.news-box .item a .date{
+    color: #aaa;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.server{
+    display: inline-block;
+    font-size: 22px;
+    padding-left: 35px;
+    padding-right: 15px;
+    margin: 10px;
+    line-height: 30px;
+    background: url(//mgcweb.oss-cn-hangzhou.aliyuncs.com/static/img/world.png) no-repeat;
+    background-size:30px;
+}
+.server .online{
+    font-size: 32px;
+    color: #0f0;
+}
+.server .offline{
+    color: #f00 !important;
+}
+.serverinfo{
+    font-size: 20px;
+    margin:10px;
+}
+.serverinfo div{
+    display: inline-block;
+    margin:5px 2px;
+}
+.serverinfo .version, .serverinfo .ip{
+    color: #777;
+}
+.serverinfo .version span, .serverinfo .ip span{
+    color: #fc0;
+    font-size: 25px;
+}
+.txt-input{
+    border: 0;
+    font-size: inherit;
+    color: inherit;
+    max-width: 300px;
+    background: transparent;
+}
+@media(max-width: 660px){
+    .server .online{ font-size: 24px; }
+    .serverinfo{ font-size: 16px; margin: 2px;}
+    .serverinfo span{ font-size: 18px; }
+}
+@media(max-width: 450px){
+    .server{ font-size: 18px; }
+    .serverinfo{ font-size: 14px; margin: 2px;}
+    .serverinfo span{ font-size: 14px; }
+}
+.about-server .columns{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.about-server .panel{
+    margin: 5px 0;
+}
+.about-server .intro .title{
+    font-size: 22px;
+}
+.about-server .intro .content{
+    font-size: 14px;
+}
+
+.qgroup{
+   	display: inline-block;
+    width: 130px;   
+    margin: 5px;
+}
+.qgroup a{
+    font-size:16px;
+    color:#000;
+}
+.qgroup span{
+    background: rgb(231, 76, 60);
+    color: #eee;
+    font-size: 18px;
+    margin-left: 2px;
+    padding: 1px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.qgroup span:hover{
+    animation: ministorm .5s ease;
+}
+
+.qgroup img{
+    width: 100%;
+}
+@media(max-width: 500px){
+    .qgroup{
+        width:100px;
+        margin: 2px;
+    }
+    .qgroup a{
+        font-size: 12px;
+    }
+    .qgroup span{
+        font-size: 14px;
+        border-radius: 3px;
+    }
+}
