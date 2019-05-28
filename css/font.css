@@ -1,15 +1,15 @@
 @font-face {
  font-family: 'DroidSans';
- src: url('https://mygunclub.cn/static/css/font/5baa0c8e344aa543dbb3c3cb.gif');
- src: url('https://mygunclub.cn/static/css/font/5baa0c8e344aa543dbb3c3cb.gif?#iefix') format('embedded-opentype'),url('https://mygunclub.cn/static/css/font/5baa0c8e344aa543dbb3c3cb.png') format('woff2'),url('https://mygunclub.cn/static/css/font/5baa0c8e344aa543dbb3c3cb.bmp') format('woff'),url('https://mygunclub.cn/static/css/font/5baa0c8e344aa543dbb3c3cb.jpg') format('truetype');
+ src: url('https://mcmg.cc/css/font/5baa0c8e344aa543dbb3c3cb.gif');
+ src: url('https://mcmg.cc/css/font/5baa0c8e344aa543dbb3c3cb.gif?#iefix') format('embedded-opentype'),url('https://mcmg.cc/css/font/5baa0c8e344aa543dbb3c3cb.png') format('woff2'),url('https://mcmg.cc/css/font/5baa0c8e344aa543dbb3c3cb.bmp') format('woff'),url('https://mcmg.cc/css/font/5baa0c8e344aa543dbb3c3cb.jpg') format('truetype');
  font-weight: normal;
  font-style: normal;
 }
 
 @font-face {
  font-family: 'hdjxyt';
- src: url('https://mygunclub.cn/static/css/font/5ba7e11e03571a30fbcb073a.gif');
- src: url('https://mygunclub.cn/static/css/font/5ba7e11e03571a30fbcb073a.gif?#iefix') format('embedded-opentype'),url('https://mygunclub.cn/static/css/font/5ba7e11e03571a30fbcb073a.png') format('woff2'),url('https://mygunclub.cn/static/css/font/5ba7e11e03571a30fbcb073a.bmp') format('woff'),url('https://mygunclub.cn/static/css/font/5ba7e11e03571a30fbcb073a.jpg') format('truetype');
+ src: url('https://mcmg.cc/css/font/5ba7e11e03571a30fbcb073a.gif');
+ src: url('https://mcmg.cc/css/font/5ba7e11e03571a30fbcb073a.gif?#iefix') format('embedded-opentype'),url('https://mcmg.cc/css/font/5ba7e11e03571a30fbcb073a.png') format('woff2'),url('https://mcmg.cc/css/font/5ba7e11e03571a30fbcb073a.bmp') format('woff'),url('https://mcmg.cc/css/font/5ba7e11e03571a30fbcb073a.jpg') format('truetype');
  font-weight: normal;
  font-style: normal;
 }
