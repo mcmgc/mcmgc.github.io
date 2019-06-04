@@ -1,7 +1,6 @@
-@import url(../fonts/OpenSans.css);
 body {
 	background-color: #F2F2F2;
-    font-family: "Open Sans","Microsoft Yahei","微软雅黑";
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 ol, ul {
 	list-style: none;
