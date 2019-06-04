@@ -8,6 +8,7 @@ $(document).ready(function(){
     	extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
     	theme: 'flat'
 	}
+	genQR()
     loadServerInfo()
     loadIP()
     new ClipboardJS('#serverip');
@@ -69,4 +70,18 @@ function setIP(){
     var ip=iplist[ipn++]
     if(ipn>=iplist.length)ipn=0
     $("#serverip-txt").val(ip)
+}
+function genQR(){
+	$("#qun1").qrcode({
+		render: 'canvas',
+		width: 130,
+		height: 130,
+		text: $("#qun1").data("src"),
+	})
+	$("#qun2").qrcode({
+		render: 'canvas',
+		width: 130,
+		height: 130,
+		text: $("#qun2").data("src"),
+	})
 }
