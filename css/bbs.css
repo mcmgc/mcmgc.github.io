@@ -1,37 +1,149 @@
-.forum-loc,.forum-action{
-    font-size: 18px;
-    margin: 10px 0;
+*{
+    transition-duration:.5s;
 }
-.dropdown-inline{
-    display: inline-block;
+.icheckbox_minimal-blue,.layui-layer{
+    transition: none;
 }
-.forum-loc b{
-    font-weight: bold;
+.nodelist {
+    height:36px;
+    overflow:hidden;
 }
-.forum-action a{
-    font-size: 15px;
+.nodelist:hover {
+    /*height:72px;*/
 }
-.forum-action label{
-    font-weight: normal;
-    font-size: 15px;
-    cursor: pointer;
+.nodelist button {
+    margin-top:2px;
+    margin-right:4px;
 }
-.forum-user{
-    float: right;
-    font-size: 18px;
+@media screen and (max-width:600px) {
+    .nodelist {
+        height:108px;
+    }
 }
-a:focus{
+.form-control:focus{
+    border-color: #337ab7;
+    outline: 0;
+    box-shadow: 0 0 8px rgba(102,102,233,.6);
+}
+.tooltip {
+    word-break:break-all;
+}
+.avatarimg{
+    width: 60%;
+    margin: 0 auto;
+    display:block;
+    margin: 16px;
+    max-width: 220px;
+    min-width: 120px;
+    margin-top:48px;
+    box-shadow: 0 0 16px rgba(0,0,0,.75);
+    border-radius: 50%;
+}
+.avatarname{
+    font-size: 22px;
+}
+.thread-list .thread-a{
+    color: #000;
     text-decoration: none !important;
 }
-.page-nav{
-    text-align: center;
-    position: relative;
-    line-height: 1.0;
+.thread-box {
+    padding: 16px 20px 24px;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    cursor: pointer;
+    border-left: 0 solid rgba(66,66,66,.85);
+    transition-duration: .3s;
 }
-.page-nav .pagination{
-    left: 50%;
-    display: inline-block !important;
+.thread-box:hover {
+    transition-duration: .3s;
+    border-left: 5px solid rgba(66,66,66,.85);
 }
+.thread-box table {
+    width: 100%;
+    font-weight: 400;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif !important;
+}
+.thread-box .tags {
+    font-size: 12px;
+}
+tag {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #333;
+    background-color: rgba(0,0,0,.05);
+    border-radius: 4px;
+    margin-right: 2px;
+    font-family: "微软雅黑",Menlo,Monaco,Consolas,"courier new",monospace;
+}
+.thread-box .min-author{
+    display:none;
+}
+.thread-box .author {
+    width: 150px;
+}
+@media screen and (max-width:768px) {
+    .thread-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .thread-box .author{
+        display:none;
+    }
+    .thread-box .max-author{
+        display:none;
+    }
+    .thread-box .min-author{
+        display:inline;
+    }
+}
+.thread-view{
+    min-height: 100%;
+}
+.thread-content{
+    padding: 32px;
+    padding-top:0;
+}
+.thread-info{
+    width: 100%;
+}
+.thread-info .thread-avatar{
+    width: 90px;
+}
+.thread-info .thread-avatar img{
+    border-radius: 50%;
+    vertical-align: top;
+    height: 70px;
+    width: 70px;
+}
+.thread-body img{
+    max-width: 100% !important;
+    max-height: unset !important;
+}
+.thread-body img:hover{
+    box-shadow: 0 0 16px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.reply{
+    width: 100%;
+    min-height: 128px;
+    max-height: 256px;
+    min-width: 100%;
+    max-width: 100%;
+}
+@media screen and (max-width:768px) {
+    .view-thread{
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 0;
+        padding-right: 0;
+    }.thread-content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .thread-avatar{
+        display:none;
+    }
+}
+/*
 .thread{
     width: 100%;
     height: 80px;
@@ -245,4 +357,4 @@ a:focus{
     color: #333;
     line-height: 20px;
     
-}
+}*/
