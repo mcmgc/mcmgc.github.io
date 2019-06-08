@@ -1,7 +1,7 @@
 *{
 	transition-duration: .5s;
 }
-.icheckbox_minimal-blue,.layui-layer,.geetest_slider_button,#page-loading{
+.icheckbox_minimal-blue,.layui-layer,.geetest_slider_button,#page-loading,.edui-default{
 	transition: none;
 }
 body {
