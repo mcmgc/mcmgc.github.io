@@ -1,8 +1,8 @@
 *{
     transition-duration:.5s;
 }
-.icheckbox_minimal-blue,.layui-layer{
-    transition: none;
+.icheckbox_minimal-blue,.layui-layer,.geetest_slider_button{
+    transition: none; 
 }
 .nodelist {
     height:36px;
@@ -129,6 +129,26 @@ tag {
     min-width: 100%;
     max-width: 100%;
 }
+.reply-list table{
+    width: 100%;
+}
+.reply-avatar{
+    width: 80px;
+    vertical-align: top;
+    padding-bottom: 8px;
+}
+.reply-avatar img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.reply-box{
+    font-size: 14px;
+}
+.reply-info{
+    color: #666;
+    font-size: 12px;
+}
 @media screen and (max-width:768px) {
     .view-thread{
         margin-left: -15px;
@@ -142,219 +162,7 @@ tag {
     .thread-avatar{
         display:none;
     }
-}
-/*
-.thread{
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px dotted #456;
-    margin-bottom: 5px;
-}
-.thread:last-child{
-    border-bottom: 1px solid #fff;
-}
-.thread .thread-img{
-    float: left;
-    width: 130px;
-    height: 75px;
-}
-.thread .thread-img img{
-    width: 100%;
-    height: 100%;
-}
-.thread .thread-info{
-    float:left;
-    margin: 0 2px;
-}
-.thread .thread-info .title{
-    font-size: 20px;
-    line-height: 22px;
-    max-height: 44px;
-    padding-left: 6px;
-    overflow: hidden;
-}
-.thread .thread-info .title a{
-    color: #000;
-}
-.thread .thread-info .title span{
-    margin: 0 2px;
-}
-.thread .thread-info .title .listtop{
-    font-size: 20px;
-    color: #f00;
-}
-.thread .thread-info .author{
-    font-size: 16px;
-    color: #777;
-}
-.thread .thread-info .author .name{
-    margin: 1px 4px;
-    color: #777;
-}
-.thread .thread-avatar{
-    float:right;
-    border: 1px solid #777;
-    width: 70px;
-    height: 70px;
-    transition: transform .5s ease;
-    transform: rotate(0deg);
-}
-.thread .thread-avatar img{
-    width: 100%;
-    height: 100%;
-}
-.thread .thread-avatar:hover{
-    transform: rotate(15deg);
-}
-
-@media(max-width: 750px){
-    .thread .thread-img,.thread-avatar{
-        display: none;
-    }
-    .thread .thread-info .title{
-        font-size: 16px;
-    }
-    .thread .thread-info .author{
-        font-size: 12px;
+    .thread-avatar.always-show{
+        display:table-cell;
     }
 }
-
-
-
-.t-loc{
-    font-size: 18px;
-    margin: 15px 0;
-}
-.t-info .t-avatar{
-    width: 80px;
-    height: 80px;
-    float: left;
-    margin: 5px 5px 0px;
-    padding: 0;
-    border: 1px solid #777;
-}
-.t-info .t-avatar img{
-    width: 100%;
-    height: 100%;
-}
-.t-info .t-title{
-    font-size: 24px;
-    line-height: 25px;
-    font-weight: bold;
-}
-.t-info .t-author,.t-info .t-modify{
-    color: #777;
-    font-size: 16px;
-    margin-top: 4px;
-}
-.t-info .t-status{
-    color: #f33;
-    font-size: 16px;
-}
-@media(max-width: 900px){
-    .t-info .t-avatar{
-    	width: 60px;
-    	height: 60px;
-	}
-	.t-info .t-title{
-    	font-size: 18px;
-    	line-height: 25px;
-	}
-	.t-info .t-author,.t-info .t-modify{
-    	font-size: 14px;
-	}
-}
-.t-content{
-    display: block;
-    clear: left;
-    margin: 25px 0 20px;
-    border: 1px dotted #aaa;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: normal;
-	line-height: 20px;
-    text-align: left;
-    color: #000;
-}
-.t-content p{
-    font-family: inherit;
-	font-size: 16px;
-	line-height: 20px;
-	margin-bottom: .4rem;
-}
-.t-tool{
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-.t-tool a.tool{
-    display: inline-block;
-    border: 1px solid #666;
-    margin: 0 3px;
-    padding: 2px 5px;
-    color: #000;
-}
-.t-share a{
-    font-size: 16px !important;
-}
-.t-tool a.tool:hover{
-    border: 1px solid #0078a0;
-    color: #0078a0;
-}
-.t-replies{
-    margin: 15px 0;
-    font-size: 16px;
-}
-.t-replies .t-title{
-    font-size: 18px;
-    font-weight: normal;
-    color: #000;
-}
-.t-replies .t-reply{
-    display: block;
-    clear: both;
-    font-size: 16px;
-    font-weight: normal;
-    color: #000;
-    border-bottom: 1px dotted #666;
-}
-.t-replies .t-reply:last-child{
-    border-bottom: 1px solid #fff;
-}
-.t-replies .t-reply .t-avatar{
-    width: 50px;
-    height: 50px;
-    float: left;
-    clear: left;
-    margin: 5px 5px 0px;
-    padding: 0;
-    border: 1px solid #777;
-}
-.t-replies .t-reply .t-avatar img{
-    width: 100%;
-    height: 100%;
-}
-.t-replies .t-reply .t-user{
-    font-size: 18px;
-}
-.t-replies .t-reply .t-user span{
-    font-size: 14px;
-    color: #777;
-}
-.t-replies .t-reply .t-rcontent{
-    font-size: 16px;
-    line-height: 20px;
-    color: #333;
-    margin: 0 0 18px;
-}
-#comment-content{
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    border: 1px solid #555;
-    padding: 5px;
-    margin: 0 0 10px;
-    font-size: 16px;
-    color: #333;
-    line-height: 20px;
-    
-}*/

@@ -1,20 +1,4 @@
 var olddata;
-$("#thread-form").validator({
-    inputs: [{
-        id: "thread-title",
-        msgbox: "thread-title-msg",
-        validator: {
-            require: {
-                message: "必须填写标题",
-            },
-            length: {
-                min: 5,
-                max: 60,
-                message: "标题长度为5-60位",
-            }
-        }
-    }]
-})
 $(document).ready(function(){
     UE.getEditor('thread-content')
     ac = UE.getEditor('thread-content').execCommand("getlocaldata")
