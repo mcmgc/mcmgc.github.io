@@ -1,3 +1,9 @@
+*{
+	transition-duration: .5s;
+}
+.icheckbox_minimal-blue,.layui-layer,.geetest_slider_button,#page-loading{
+	transition: none;
+}
 body {
 	background-color: #F2F2F2;
     font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;

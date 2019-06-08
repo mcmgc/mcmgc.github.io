@@ -1,9 +1,3 @@
-*{
-    transition-duration:.5s;
-}
-.icheckbox_minimal-blue,.layui-layer,.geetest_slider_button{
-    transition: none; 
-}
 .nodelist {
     height:36px;
     overflow:hidden;

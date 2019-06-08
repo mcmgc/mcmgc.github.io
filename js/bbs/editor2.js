@@ -1,26 +1,12 @@
-var olddata;
-$(document).ready(function(){
-    UE.getEditor('econtent')
-    ac = UE.getEditor('thread-content').execCommand("getlocaldata")
-    if(ac!=undefined && ac!=""){
-        $("#thread-recover").show()
-        olddata = ac
+function wordCount(str, cnCharByteLen) {
+    var byteLen = 0;
+    for (var i = 0; i < str.length; i++) {
+        if ((/[\x00-\xff]/g).test(str.charAt(i)))
+            byteLen += 1;
+        else
+            byteLen += cnCharByteLen;
     }
-    $(window).resize()
-    loadCaptcha()
-    UE.getEditor('thread-content').ready(function(){
-        $("#page-loading").fadeOut(800)
-        $("#page-main").fadeIn(1200)
-    })
-    
-})
-function recoverContent(){
-    layer.confirm("你确认要恢复内容吗?当前已编辑的内容将会丢失!\n以下为将要恢复的内容:\n"+olddata, {title: "确认",btn: ['确认','取消'],}, function(){
-  		UE.getEditor('thread-content').setContent(olddata,false)
-    	UE.getEditor('thread-content').execCommand("clearlocaldata");
-    	$("#thread-recover").hide()
-        layer.closeAll();
-    }, function(){ layer.closeAll()});
+    return byteLen;
 }
 var handler = function (captchaObj) {
     captchaObj.onSuccess(function () {
@@ -29,18 +15,16 @@ var handler = function (captchaObj) {
             layer.msg("请完成安全验证",{icon: 2, time: 1500});
             return false
         }
-        disableBtn("#btn-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在提交')
+        disableBtn("#btn-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 提交')
         $.ajax({
             url: "/action/editor.bbs",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,
             data: {
-                act: $("#act").val(),
-                pid: $("#pid").val(),
-                tid: $("#tid").val(),
-                atitle:$("#thread-title").val(),
-                acontent:UE.getEditor('thread-content').getContent(),
+                act: 'reply',
+                rid: $("#rid").val(),
+                content:$("#content").val(),
                 gt_challenge: result.geetest_challenge,
                 gt_validate: result.geetest_validate,
                 gt_seccode: result.geetest_seccode
@@ -68,18 +52,6 @@ var handler = function (captchaObj) {
         });
     })
     $('#btn-submit').click(function () {
-        if(!$("#thread-form").validator("validate")){
-            return false
-        }
-        if(!UE.getEditor('thread-content').hasContents()){
-            layer.msg("请输入正文内容",{icon: 2, time: 1500, shade: 0.5});
-            return
-        }
-    	var ac = UE.getEditor('thread-content').getPlainTxt()
-        if(ac.length<20){
-            layer.msg("正文内容不能小于20字",{icon: 2, time: 1500, shade: 0.5});
-            return
-        }
         captchaObj.verify();
     })
     window.gt = captchaObj;
@@ -104,5 +76,18 @@ function loadCaptcha(){
             layer.msg("安全验证加载失败",{icon:2,time:1500})
             setTimeout(function(){loadCaptcha()},1500)
         }
-    });
+	});
 }
+function checkReply(e){
+    var c = wordCount($("#econtent").val(),1)
+    $("#wordCount").html(500-c)
+    return c<=500 && c>0;
+}
+$(document).ready(function(){
+    loadCaptcha();
+    checkReply();
+    $("#econtent").on('change',checkReply)
+    $("#econtent").on('keyup',checkReply)
+    $("#econtent").on('mouseup',checkReply)
+    $("#page-loading").fadeOut(500)
+})
