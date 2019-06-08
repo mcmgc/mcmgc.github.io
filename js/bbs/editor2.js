@@ -22,9 +22,9 @@ var handler = function (captchaObj) {
             dataType: 'json',
     		timeout: 5000,
             data: {
-                act: 'reply',
+                action: 'reply',
                 rid: $("#rid").val(),
-                content:$("#content").val(),
+                content:$("#econtent").val(),
                 gt_challenge: result.geetest_challenge,
                 gt_validate: result.geetest_validate,
                 gt_seccode: result.geetest_seccode
@@ -90,4 +90,5 @@ $(document).ready(function(){
     $("#econtent").on('keyup',checkReply)
     $("#econtent").on('mouseup',checkReply)
     $("#page-loading").fadeOut(500)
+    $("#page-main").fadeIn(500);
 })
