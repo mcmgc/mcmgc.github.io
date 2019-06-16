@@ -71,7 +71,7 @@ function submitConfirm(){
         formData.append("imgBase64",encodeURIComponent(fileImg));
     disableBtn("#submit-confirm")
     $.ajax({
-        url: "/action/setting_avatar.action",
+        url: "/setting_avatar.do",
         type: 'POST',
         data: formData,
         timeout : 10000,
@@ -101,7 +101,7 @@ $("#btn-gravatar").click(function(){
         layer.closeAll()
         layer.alert("正在上传",{icon: 16, shade: 0.5, title: false, closeBtn: 0, btn:[]});
         $.ajax({
-        url: "/action/setting_avatar.action",
+        url: "/setting_avatar.do",
         data: {avatar: 'gravatar'},
         type: 'POST',
         timeout : 5000,
@@ -127,7 +127,7 @@ $("#btn-qqavatar").click(function(){
         layer.closeAll()
         layer.alert("正在上传",{icon: 16, shade: 0.5, title: false, closeBtn: 0, btn:[]});
         $.ajax({
-        url: "/action/setting_avatar.action",
+        url: "/setting_avatar.do",
         data: {avatar: 'qq'},
         type: 'POST',
         timeout : 5000,

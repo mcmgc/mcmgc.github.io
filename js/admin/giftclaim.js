@@ -64,7 +64,7 @@ $("#gift-search").click(function(){
     },
     responsive: true,
     language: {
-        "url": "//mygunclub.cn/static/vendor/datatables/1.10.18/language/zh-cn.json"
+        "url": "//mcmg.cc/jslib/datatables/1.10.18/language/zh-cn.json"
     },
     ordering: false,
     columnDefs: [

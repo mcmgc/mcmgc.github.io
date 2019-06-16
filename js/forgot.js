@@ -47,7 +47,7 @@ var handler = function(captchaObj) {
 
         disableBtn("#btn-step1-submit", '<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
         $.ajax({
-            url: '/action/forgot.action',
+            url: '/forgot.do',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -87,7 +87,7 @@ var handler = function(captchaObj) {
 
 function loadCaptcha() {
     $.ajax({
-        url: "/action/captcha.action",
+        url: "/captcha.do",
         type: "post",
         data: {isPC: isPC()},
         dataType: "json",
@@ -138,7 +138,7 @@ $('#btn-step2-submit').click(function() {
     }
     disableBtn("#btn-step2-submit", '<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
     $.ajax({
-        url: "/action/forgot.action",
+        url: "/forgot.do",
         type: 'POST',
         dataType: 'json',
         timeout: 5000,
@@ -215,7 +215,7 @@ $('#btn-step3-submit').click(function() {
     }
     disableBtn("#btn-step3-submit", '<i class="fa fa-spinner fa-spin fa-fw"></i> 提交')
     $.ajax({
-        url: "/action/forgot.action",
+        url: "/forgot.do",
         type: 'POST',
         dataType: 'json',
         timeout: 5000,

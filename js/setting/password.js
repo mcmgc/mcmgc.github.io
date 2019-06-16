@@ -2,7 +2,7 @@ $("#btn-step1-submit").click(function() {
     if($("#form-step1").validator("validate")){
         disableBtn("#btn-step1-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
         $.ajax({
-        	url: "action/setting_password.action?t=" + (new Date()).getTime(),
+        	url: "/setting_password.do",
         	type: "POST",
         	data: {action:'currentPassword'},
         	dataType: "json",
@@ -65,7 +65,7 @@ var handler = function (captchaObj) {
             disableBtn("#step2-sendcode", "正在发送");
             layer.closeAll();
             $.ajax({
-                url: "action/setting_password.action?t=" + (new Date()).getTime(),
+                url: "/setting_password.do",
                 type: "POST",
                 data: {
                     action: "sendCode",
@@ -112,7 +112,7 @@ var handler = function (captchaObj) {
         }
         disableBtn("#btn-step2-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在验证')
         $.ajax({
-            url: "action/setting_password.action?t=" + (new Date()).getTime(),
+            url: "/setting_password.do",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,
@@ -156,7 +156,7 @@ var handler = function (captchaObj) {
 };
 
 $.ajax({
-    url: "action/setting_password.action?t=" + (new Date()).getTime(),
+    url: "/captcha.do",
     type: "post",
     data: {isPC:isPC(),action: "captcha"},
     dataType: "json",
@@ -199,7 +199,7 @@ if ($("#data-mb").data("value")>0) {
                     message: "验证码格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_password.action?t=" + (new Date()).getTime(),
+                    url: "/setting_password.do",
                     data: {
                         action: "checkCode"
                     },
@@ -288,7 +288,7 @@ var timer2 = 0,inter2
         }
         disableBtn("#btn-step3-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在提交')
         $.ajax({
-            url: "action/setting_password.action?t=" + (new Date()).getTime(),
+            url: "/setting_password.do",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,

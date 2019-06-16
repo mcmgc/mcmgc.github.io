@@ -26,7 +26,7 @@ $("#btn-step1-submit").click(function() {
         if($("#form-step1").validator("validate")){
         	disableBtn("#btn-step1-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
         	$.ajax({
-        		url: "action/setting_email.action?t=" + (new Date()).getTime(),
+        		url: "/setting_email.do",
         		type: "POST",
         		data: {action:'currentEmail',email:$("#step1-email").val()},
         		dataType: "json",
@@ -52,7 +52,7 @@ $("#btn-step1-submit").click(function() {
     }else{
         disableBtn("#btn-step1-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
         	$.ajax({
-        		url: "action/setting_email.action?t=" + (new Date()).getTime(),
+        		url: "/setting_email.do",
         		type: "POST",
         		data: {action:'currentEmail'},
         		dataType: "json",
@@ -105,7 +105,7 @@ var handler = function (captchaObj) {
         }
         disableBtn("#btn-step2-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在验证')
         $.ajax({
-            url: "action/setting_email.action?t=" + (new Date()).getTime(),
+            url: "/setting_email.do",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,
@@ -149,7 +149,7 @@ var handler = function (captchaObj) {
 };
 
 $.ajax({
-    url: "action/setting_email.action?t=" + (new Date()).getTime(),
+    url: "/setting_email.do",
     type: "post",
     data: {isPC:isPC(),action: "captcha"},
     dataType: "json",
@@ -195,7 +195,7 @@ if ($("#data-phone").data("bind")) {
                     disableBtn("#step2-sendphonecode")
                 },
                 ajax: {
-                    url: "action/setting_email.action?t=" + (new Date()).getTime(),
+                    url: "/setting_email.do",
                     data: {
                         action: "checkPhone"
                     },
@@ -228,7 +228,7 @@ if ($("#data-phone").data("bind")) {
                     message: "手机验证码格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_email.action?t=" + (new Date()).getTime(),
+                    url: "/setting_email.do",
                     data: {
                         action: "checkPhoneCode"
                     },
@@ -259,7 +259,7 @@ if ($("#data-phone").data("bind")) {
             disableBtn("#step2-sendphonecode", "正在发送");
             layer.closeAll();
             $.ajax({
-                url: "action/setting_email.action?t=" + (new Date()).getTime(),
+                url: "/setting_email.do",
                 type: "POST",
                 data: {
                     action: "sendPhoneCode",
@@ -339,7 +339,7 @@ var timer2 = 0,inter2
                		message: "邮箱格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_email.action?t=" + (new Date()).getTime(),
+                    url: "/setting_email.do",
                     data: {
                         action: "checkEmail"
                     },
@@ -369,7 +369,7 @@ var timer2 = 0,inter2
                     message: "邮箱验证码格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_email.action?t=" + (new Date()).getTime(),
+                    url: "/setting_email.do",
                     data: {
                         action: "checkEmailCode"
                     },
@@ -397,7 +397,7 @@ var timer2 = 0,inter2
             disableBtn("#step3-sendemailcode", "正在发送");
             layer.closeAll();
             $.ajax({
-                url: "action/setting_email.action?t=" + (new Date()).getTime(),
+                url: "/setting_email.do",
                 type: "POST",
                 data: {
                     action: "sendEmailCode",
@@ -439,7 +439,7 @@ var timer2 = 0,inter2
         }
         disableBtn("#btn-step3-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在提交')
         $.ajax({
-            url: "action/setting_email.action?t=" + (new Date()).getTime(),
+            url: "/setting_email.do",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,

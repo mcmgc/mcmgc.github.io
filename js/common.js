@@ -20,8 +20,8 @@ function disableBtn(btn,text){
 }
 function enableBtn(btn,text){
     if(btn===undefined)return;
-    $(btn).removeAttr("disabled")
-    if(text!==undefined)$(btn).html(text)
+    if(text!==false)$(btn).removeAttr("disabled")
+    if(text!==false && text!==undefined)$(btn).html(text)
     else if($(btn).data("text")!==undefined)$(btn).html($(btn).data("text"))
 }
 function isMobile() {

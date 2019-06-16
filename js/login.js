@@ -70,7 +70,7 @@ var handler = function (captchaObj) {
             },
             success: function (data) {
                 if (data.code==100){
-                    $("#btn-submit").html("已登录")
+                    enableBtn("#btn-submit",false)
                     layer.msg(data.msg,{icon:1,time:1500})
                     canSubmit = true
                     $("#login-form").trigger("submit")
@@ -98,30 +98,30 @@ var handler = function (captchaObj) {
     window.gt = captchaObj;
 };
 function loadCaptcha(){
-$.ajax({
-    url: "/captcha.do",
-    type: "post",
-    data: {isPC:isPC()},
-    dataType: "json",
-    timeout: 5000,
-    success: function (data) {
-        $('#login-captcha .gt-text').hide();
-        $('#login-captcha .gt-wait').show();
-        $("#login-captcha").parent().find(".help-block").html('&nbsp;')
-        initGeetest({
-            gt: data.gt,
-            challenge: data.challenge,
-            offline: !data.success,
-            new_captcha: data.new_captcha,
-            product: "popup",
-            width: "100%",
-            https: true
-        }, handler);
-    },error: function(){
-        $("#login-captcha").parent().find(".help-block").html('<i class="fa fa-exclamation-circle"></i> 安全验证加载失败')
-        setTimeout(function(){loadCaptcha()},1500)
-    }
-});
+    $.ajax({
+        url: "/captcha.do",
+        type: "post",
+        data: {isPC:isPC()},
+        dataType: "json",
+        timeout: 5000,
+        success: function (data) {
+            $('#login-captcha .gt-text').hide();
+            $('#login-captcha .gt-wait').show();
+            $("#login-captcha").parent().find(".help-block").html('&nbsp;')
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                offline: !data.success,
+                new_captcha: data.new_captcha,
+                product: "popup",
+                width: "100%",
+                https: true
+            }, handler);
+        },error: function(){
+            $("#login-captcha").parent().find(".help-block").html('<i class="fa fa-exclamation-circle"></i> 安全验证加载失败')
+            setTimeout(function(){loadCaptcha()},1500)
+        }
+    });
 }
 $(document).keyup(function(e){
 	if(e.keyCode==13){

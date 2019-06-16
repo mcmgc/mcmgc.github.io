@@ -169,7 +169,7 @@ var handler = function(captchaObj) {
             },
             success: function(data) {
                 if (data.code == 100) {
-                    $("#btn-submit").html("已登录")
+                    enableBtn("#btn-submit",false)
                     layer.msg(data.msg, { icon: 1, time: 1500 })
                     canSubmit = true
                     $("#login-form").trigger("submit")

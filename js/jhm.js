@@ -23,7 +23,7 @@ var handler = function(captchaObj) {
         }
         disableBtn("#btn-submit", '<i class="fa fa-spinner fa-spin fa-fw"></i> 正在提交')
         $.ajax({
-            url: "/action/jhm.action?t=" + (new Date()).getTime(),
+            url: "/jhm.do",
             type: 'POST',
             dataType: 'json',
             timeout: 5000,
@@ -65,7 +65,7 @@ var handler = function(captchaObj) {
 function loadCaptcha() {
     $("#jhm-captcha").parent().find(".help-block").html('&nbsp;')
     $.ajax({
-        url: "/action/captcha.action",
+        url: "/captcha.do",
         type: "post",
         data: { isPC: isPC() },
         dataType: "json",
@@ -110,7 +110,7 @@ $("#form-jhm").validator({
                     message: "激活码格式不正确",
                 },
                 ajax: {
-                    url: "/action/jhm.action",
+                    url: "/jhm.do",
                     data: {
                         action: "checkCode"
                     },

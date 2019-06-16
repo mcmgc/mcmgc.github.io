@@ -26,7 +26,7 @@ $("#btn-step1-submit").click(function() {
         if($("#form-step1").validator("validate")){
         	disableBtn("#btn-step1-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
         	$.ajax({
-        		url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+        		url: "/setting_phone.do",
         		type: "POST",
         		data: {action:'currentPhone',phone:$("#step1-phone").val()},
         		dataType: "json",
@@ -52,7 +52,7 @@ $("#btn-step1-submit").click(function() {
     }else{
         disableBtn("#btn-step1-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 下一步')
         	$.ajax({
-        		url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+        		url: "/setting_phone.do",
         		type: "POST",
         		data: {action:'currentPhone'},
         		dataType: "json",
@@ -107,7 +107,7 @@ var handler = function (captchaObj) {
             disableBtn("#step2-sendemailcode", "正在发送");
             layer.closeAll();
             $.ajax({
-                url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+                url: "/setting_phone.do",
                 type: "POST",
                 data: {
                     action: "sendEmailCode",
@@ -153,7 +153,7 @@ var handler = function (captchaObj) {
         }
         disableBtn("#btn-step2-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在验证')
         $.ajax({
-            url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+            url: "/setting_phone.do",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,
@@ -196,7 +196,7 @@ var handler = function (captchaObj) {
 };
 
 $.ajax({
-    url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+    url: "/captcha.do",
     type: "post",
     data: {isPC:isPC(),action: "captcha"},
     dataType: "json",
@@ -239,7 +239,7 @@ if ($("#data-email").data("bind")) {
                     message: "邮箱验证码格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+                    url: "/setting_phone.do",
                     data: {
                         action: "checkEmailCode"
                     },
@@ -300,7 +300,7 @@ var timer2 = 0,inter2
                		message: "手机号格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+                    url: "/setting_phone.do",
                     data: {
                         action: "checkPhone"
                     },
@@ -329,7 +329,7 @@ var timer2 = 0,inter2
                     message: "手机验证码格式不正确",
                 },
                 ajax: {
-                    url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+                    url: "/setting_phone.do",
                     data: {
                         action: "checkPhoneCode"
                     },
@@ -357,7 +357,7 @@ var timer2 = 0,inter2
             disableBtn("#step3-sendphonecode", "正在发送");
             layer.closeAll();
             $.ajax({
-                url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+                url: "/setting_phone.do",
                 type: "POST",
                 data: {
                     action: "sendPhoneCode",
@@ -399,7 +399,7 @@ var timer2 = 0,inter2
         }
         disableBtn("#btn-step3-submit",'<i class="fa fa-spinner fa-spin fa-fw"></i> 正在提交')
         $.ajax({
-            url: "action/setting_phone.action?t=" + (new Date()).getTime(),
+            url: "/setting_phone.do",
             type: 'POST',
             dataType: 'json',
     		timeout: 5000,
