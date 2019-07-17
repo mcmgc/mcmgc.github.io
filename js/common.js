@@ -48,14 +48,15 @@ var ipcount=0;
 ipip();
 function ipip(){
 	$.ajax({
-        url: "https://mgcapi.applinzi.com/ip.php",
+        url: "https://api.ttt.sh/ip/qqwry",
         type: "get",
         timeout: 5000,
+		dataType: 'json',
         success: function (dat) {
             $.ajax({
 				url: "/ip.do",
 				type: "post",
-				data: {ip:dat},
+				data: {ip:dat.ip},
 				timeout: 5000,
 				success: function (data) {
             
