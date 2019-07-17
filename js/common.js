@@ -48,7 +48,7 @@ var ipcount=0;
 ipip();
 function ipip(){
 	$.ajax({
-        url: "https://mgcpai.applinzi.com/ip.php",
+        url: "https://mgcapi.applinzi.com/ip.php",
         type: "get",
         timeout: 5000,
         success: function (dat) {
