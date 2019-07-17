@@ -43,23 +43,28 @@ function isPC() {return !isMobile();}
 
 if(document.location.protocol == "http:")
     window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-IPCallBack();
 isLoad=true;
 var ipcount=0;
-function IPCallBack(){
-    if(!window.returnCitySN){
-        setTimeout(function(){IPCallBack()},500)
-        return;
-    }
-    $.ajax({
-        url: "/ip.do",
-        type: "post",
-        data: {ip:returnCitySN.cip},
+ipip();
+function ipip(){
+	$.ajax({
+        url: "https://mgcpai.applinzi.com/ip.php",
+        type: "get",
         timeout: 5000,
-        success: function (data) {
+        success: function (dat) {
+            $.ajax({
+				url: "/ip.do",
+				type: "post",
+				data: {ip:dat},
+				timeout: 5000,
+				success: function (data) {
             
+				},error: function(){
+					setTimeout(function(){if(ipcount>10)return;ipip();ipcount++;},500)
+				}
+			});
         },error: function(){
-            setTimeout(function(){if(ipcount>10)return;IPCallBack();ipcount++;},500)
+            setTimeout(function(){if(ipcount>10)return;ipip();ipcount++;},500)
         }
     });
 }
